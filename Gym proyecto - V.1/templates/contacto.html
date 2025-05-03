@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - JDY GYM</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/contacto.css')}}"> 
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src= "{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img"> </div>
+        
+            <div><h1> Contacto</h1> 
+        <p>Nos complace presentarnos como los programadores encargados del desarrollo de la página web para JDY GYM, un proyecto que forma parte del prestigioso programa Programación Innovador de Talento Tech. A continuación, podrán conocer más sobre nosotros y cómo ponerse en contacto.</p>
+        
+        <nav class="navigation">
+            <a href="{{url_for('index')}}" class="nav-link active">Inicio</a>
+            <a href="{{url_for('registro')}}" class="nav-link">Registro</a>
+            <a href="{{url_for('contacto')}}" class="nav-link">Contacto</a>
+        </nav>
+    </div>
+    
+    </header>
+
+    <section class="team">
+        <h2>Conoce a los Programadores</h2>
+        <div class="contact-info">
+            <div class="contact-person">
+                <img src="{{url_for('static', filename='imagenes/TEAM3.png')}}" alt="Héctor Daniel Pérez Leyton"> <!-- Ruta corregida -->
+                <h3><a href="https://wa.me/573246153887?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">Héctor Daniel Pérez Leyton</a></h3>
+                <p>Programador Backend & Frontend</p>
+                <p>Teléfono: <a href="https://wa.me/573246153887?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">324 615 3887</a></p>
+            </div>
+            <div class="contact-person">
+                <img src="{{url_for('static', filename='imagenes/TEAM1.png')}}" alt="Yudy Andrea Pérez Barreto"> <!-- Ruta corregida -->
+                <h3><a href="https://wa.me/573042091214?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">Yudy Andrea Pérez Barreto</a></h3>
+                <p>Programadora Frontend & Backend</p>
+                <p>Teléfono: <a href="https://wa.me/573042091214?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">304 209 1214</a></p>
+            </div>
+            <div class="contact-person">
+                <img src="{{url_for('static', filename='imagenes/team_2.png')}}" alt="Juan David Martinez Medina">
+                <h3><a href="https://wa.me/573143209494?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">Juan David Martínez Medina</a></h3>
+                <p>Programador Full Stack</p>
+                <p>Teléfono: <a href="https://wa.me/573143209494?text=Hola,%20quiero%20hacer%20una%20consulta%20sobre%20JDY%20GYM" target="_blank">314 320 9494</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 JDY GYM | Todos los derechos reservados</p>
+
+
+
+
+    </footer>
+
+</body>
+</html>
+

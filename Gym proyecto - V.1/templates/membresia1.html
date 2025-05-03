@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDY GYM | Transforma tu cuerpo</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesmembresia.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/headerfinal.css')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='imagenes/titulo_icono.png')}}">
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img">
+                <h1 class="logo-text"> JDY GYM </h1>
+            </div>
+
+            <nav class="navigation">
+                    <a href="{{url_for('index')}}" class="nav-link active">Inicio</a>
+                    <a href="{{url_for('registro')}}" class="nav-link ">Registro</a>
+                    <a href="{{url_for('precios')}}" class="nav-link">Planes & precios</a>
+                    <a href="{{url_for('admin')}}" class="nav-link ">Administrador</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+        <section id="seccion1">
+                <img src="{{url_for('static', filename='imagenes/Banner2.jpg')}}" alt="Imagen 2" class="img">
+                <img src="{{url_for('static', filename='imagenes/Banner3.jpg')}}" alt="Imagen 3" class="img2">
+                <img src="{{url_for('static', filename= 'imagenes/Banner4Centro.png')}}" alt="Imagen 4"  class="img3">
+                <img src="{{url_for('static', filename='imagenes/Banner5.png')}}" alt="Imagen 5" class="img4">
+                <img src="{{url_for('static', filename='imagenes/Banner6.jpg')}}" alt="Imagen 6" class="img5">
+    
+
+            </section>
+    
+            <fieldset>
+                <h1 id="fieldh1">Formulario de Membresia</h1>
+                <form action="" id="frmS">
+                    <label for="correoR">Dirección de correo electronico</label>
+                    <input type="text" placeholder="Ingrese su correo electronico registrado" id="correoR">
+                    
+                    <label for="tipo_plan">Elija el membresia elegida</label>
+                    <select name="tipo_plan" id="tipo_plan">
+                        <option value="Seleccione">Seleccione</option> 
+                        <option value="P hierro">Plan hierro</option>
+                        <option value="P acero">Plan acero</option>
+                        <option value="P platino">Plan platino</option>
+                        <option value="P titanio">Plan titanio</option>
+                    </select>
+                    
+                    <label for="tiempo_suscripcion">Seleccione la cantidad de meses</label>
+                    <select name="tiempo_suscripcion" id="tiempo_suscripcion">
+                        <option value="opcion">Seleccione una opcción</option>
+                        <option value="1">1 mes</option>
+                        <option value="2">2 meses</option>
+                        <option value="3">3 meses</option>
+                        <option value="4">4 meses</option>
+                        <option value="5">5 meses</option>
+                        <option value="6">6 meses</option>
+                        <option value="7">7 meses</option>
+                        <option value="8">8 meses</option>
+                        <option value="9">9 meses</option>
+                        <option value="10">10 meses</option>
+                        <option value="11">11 meses</option>
+                        <option value="12">12 meses</option>
+                    </select>
+                    
+                    <button type="submit" id="Botonsuscribirse">Suscribirse</button>
+                
+            
+                </form>
+                
+            </fieldset>
+    
+        
+    </main>
+
+    <Section id="btnPrecios">
+        <div id="btnmem">
+
+        <h3>Consulta cuanto vale tu suscripción</h3>
+        <button>
+            <a href="{{url_for('precios')}}" class="footer-link">Ver precios</a>  
+        </button>
+        </div>
+
+
+    </Section>
+
+
+
+    <script src="{{url_for('static', filename='js/registrard.js')}}"></script>
+</body>
+
+<footer class="footer" id="fo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JDY GYM</h3>
+                <p>Transformando vidas</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Horarios</a></li>
+                    <li><a href="{{url_for('precios')}}" class="footer-link">Precios</a></li>
+                    <li><a href="{{url_for('contacto')}}"  class="footer-link">Desarrolladores</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="contact-info">
+                    <p> +57 123 456 789</p>
+                    <p> info@jdygym.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2023 JDY GYM - Todos los derechos reservados</p>
+    </div>
+</footer>

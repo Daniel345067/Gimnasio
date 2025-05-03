@@ -1,0 +1,95 @@
+CODIGO PARA LA CREACION DE LA TABLA EN XAMPP MYSQL
+
+
+CREATE TABLE clientes( 
+    documento INT(11) PRIMARY KEY NOT NULL ,
+    correo VARCHAR(100)NOT NULL,
+    nombres VARCHAR (100) NOT NULL,
+    apellidos VARCHAR (150) NOT NULL,
+    sexo ENUM('Masculino', 'Femenino') NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    telefono INT,
+    edad INT,
+    permisos ENUM('Si', 'No') NOT NULL
+
+);
+
+Para adicionar una columna con documento
+ALTER TABLE usuarios
+ADD COLUMN documento VARCHAR(11) AFTER apellidos; 
+
+Modificanto que quede solo se pueda registrar si tiene dato documento
+ALTER TABLE usuarios
+MODIFY COLUMN documento VARCHAR(11) NOT NULL;
+
+ADD COLUMN edad VARCHAR(11) NOT NULL AFTER fecha_nacimiento; 
+
+modificando una columna de una tabla, 
+ALTER TABLE nombre_tabla
+MODIFY COLUMN documento INT;
+
+
+CREANDO TABLAS BASE DE DATOS gymjdy
+
+CREATE TABLE usuarios(
+    correo VARCHAR(60) PRIMARY KEY NOT NULL,
+    t_documento ENUM ('Cédula de cuidadanía', 'Tarjeta de indentidad', 'Cedula de extranjería') NOT NULL,
+    documento INT(11) NOT NULL ,
+    nombre VARCHAR (100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    edad INT (4), 
+    sexo ENUM('Masculino', 'Femenino') NOT NULL,
+    ciudad ENUM ('Bogota', 'Medellin', 'Cartagena')
+    telefono INT,
+    password VARCHAR(30) NOT NULL,
+    permisos ENUM('Si', 'No') NOT NULL
+);
+
+Para adicionar una columna cuidad
+ADD COLUMN ciudad ENUM ('Bogota', 'Medellin', 'Cartagena') AFTER sexo; 
+
+campos tabla
+(correo, t_documento, documento, nombre, fecha_nacimiento,edad, sexo, ciudad, telefono, password, permisos)
+
+
+id 
+(correo, t_documento, documento, nombre, fecha_nacimiento, sexo, telefono, password, confirmacion, permisos)
+(correo,t_documento,documento,nombre,fecha_nacimiento,sexo,telefono,password,permisos)
+
+CREATE TABLE suscripcion (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	usuario_correo VARCHAR (60) NOT NULL,
+	fecha_sus DATE, 
+	tipo_plan ENUM ('P hiero','P acero', 'P platino', 'P titaneo') NOT NULL,
+	tiempo_suscripcion INT,
+	valor_pago INT (6),
+	FOREIGN KEY (usuario_correo) REFERENCES usuarios(correo)
+
+);
+
+html-(correoR, tipo_plan, tiempo_suscripcion) hay que ingresar la fecha en javascript y el valor pagado
+flask- (usuario_correo, fecha_sus, tipo_plan, tiempo_suscripcion, valor_pago)
+ALTER TABLE suscripcion
+MODIFY COLUMN fecha_sus DATE NOT NULL; 
+
+ALTERANDO PARAMEROS DE ENUM EN UN COLUNMA YA DEFINIDA
+
+titaneo a titanio 
+De esto: 
+tipo_plan ENUM ('P hiero','P acero', 'P platino', 'P titaneo') NOT NULL,
+
+a esto: 
+Primero hay que actualizar los datos de titaneo a titanio en la columna a modificar para que permita el cambio
+
+UPDATE suscripcion
+SET tipo_plan = 'P titanio'
+WHERE tipo_plan = 'P titaneo';
+
+Luego se procede a realizar la modificación con la siguiente sintaxis: 
+
+ALTER TABLE suscripcion 
+MODIFY COLUMN tipo_plan ENUM('P hierro', 'P acero', 'P platino', 'P titaneo', 'P titanio') NOT NULL;
+
+
+

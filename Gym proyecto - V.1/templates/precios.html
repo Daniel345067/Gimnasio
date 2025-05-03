@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Suscripción</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/precios.css')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='imagenes/titulo_icono.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">i
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img">
+                <h1 class="logo-text"> JDY GYM </h1>
+            </div>
+
+            <nav class="navigation">
+                    <a href="{{url_for('index')}}" class="nav-link ">Inicio</a>
+                    <a href="{{url_for('registro')}}" class="nav-link ">Registro</a>
+                    <a href="{{url_for('precios')}}" class="nav-link active">Planes & precios</a>
+                    <a href="{{url_for('admin')}}" class="nav-link ">Administrador</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <header>
+        <h1>Planes de Suscripción</h1>
+        <p>Elige tu plan y la duración para conocer el precio final con descuento</p>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="container">
+
+        <div id="caja1">
+            <div class="descuentos">
+                <p> Elige un plan hierro o acero por 6 meses o mas tiempo y obtén </p>
+                <h2>20% descuento</h2>
+                <p>en el valor total de la suscripción</p>
+            </div>
+
+            <div class="descuentos">
+                <p> Elige un plan platino o titanio por 3 meses o mas tiempo y obtén </p>
+                <h2>15% descuento</h2>
+                <p>en el valor total de la suscripción</p>
+            </div>
+
+            
+        </div>
+
+        <!-- Formulario -->
+        <form id="subscription-form">
+            <h2>Selecciona tu plan</h2>
+
+            <!-- Planes de suscripción -->
+            <label for="plan">Elige un plan:</label>
+            <select id="plan" name="plan">
+                <option value="hierro">Plan Hierro - $60,000</option>
+                <option value="acero">Plan Acero - $80,000</option>
+                <option value="platino">Plan Platino - $100,000</option>
+                <option value="titanio">Plan Titanio - $120,000</option>
+            </select>
+
+            <!-- Duración de la suscripción -->
+            <label for="months">Duración (meses):</label>
+            <input type="number" id="months" name="months" min="1" max="12" value="1">
+
+            <!-- Botón para calcular precio -->
+            <button type="button" onclick="calculatePrice()">Calcular Precio</button>
+
+
+            <p id="discount-message"></p>
+
+        
+            <h3 id="final-price">Precio Final: $0</h3>
+            <h3 id="discount-total">Descuento : $0</h3>
+        </form>
+    </div>
+
+    <script src="{{url_for('static', filename='js/precios.js')}}"></script>
+</body>
+
+<footer class="footer" id="fo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JDY GYM</h3>
+                <p>Transformando vidas</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Horarios</a></li>
+                    <li><a href="{{url_for('precios')}}" class="footer-link">Precios</a></li>
+                    <li><a href="{{url_for('contacto')}}"  class="footer-link">Desarrolladores</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="contact-info">
+                    <p> +57 123 456 789</p>
+                    <p> info@jdygym.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2023 JDY GYM - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+</html>

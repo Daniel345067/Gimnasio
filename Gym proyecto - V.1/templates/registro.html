@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registrostyle.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/headerfinal.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/membresia2.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+
+    
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img">
+                <h1 class="logo-text"> JDY GYM </h1>
+            </div>
+
+            <nav class="navigation">
+                    <a href="{{url_for('index')}}" class="nav-link ">Inicio</a>
+                    <a href="{{url_for('registro')}}" class="nav-link active ">Registro</a>
+                    <a href="{{url_for('precios')}}" class="nav-link">Planes & precios</a>
+                    <a href="{{url_for('admin')}}" class="nav-link ">Administrador</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="registrodatos">
+
+        <div id="caja1">
+            <h3>Haz parte de nuestra comunidad  registra tus datos y vive la experiencia </h3>
+        </div>
+
+        <form action=""  id="frmR">
+            <h2>Registro</h2>
+            <label for="">Dirección de correo electrónico</label>
+            <input type="text" placeholder="Digite su correo electronico" id="correo">
+            
+            <label for=""> Seleccione el tipo de documento a ingresar</label>
+            <select name="t_documento" id="t_documento" >
+                <option value="">Seleccione</option>
+                <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Cédula de extranjería">Cédula de extranjería</option>
+            </select>
+
+            <label for="">Documento</label>
+            <input type="text" placeholder="Documento"  id="documento">
+            <label for="">Nombre</label>
+            <input type="text" placeholder="Digite su nombre completo" id="nombre">
+            
+            <label for="">Fecha de nacimiento</label>
+            <input type="date" placeholder="Fecha de nacimiento" id="fecha_nacimiento">
+
+            <label for=""> Sexo</label>
+            <select name="sexo" id="sexo" >
+                <option value="">Seleccione</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+
+            <label for="">Nuestras sedes</label>
+            <select name="ciudad" id="ciudad">
+                <option value="">Seleccione una sede</option>
+                <option value="Bogota">Bogota</option>
+                <option value="Medellin"> Medellin</option>
+                <option value="Cartagena">Cartagena</option>
+            </select>
+
+            <label for="">Telefono móvil</label>
+            <input type="text" placeholder="Celular" id="telefono">
+            <label for="">Cree una contraseña segura</label>
+            <input type="password" placeholder="Contraseña" suggested: "new-password" id="password">
+            <input type="password" placeholder="Confirme la contraseña ingresada" id="confirmacion">
+            
+            <label for="">Selecione si esta de acuerdo en permitirnos enviar información de su interes a su correo electronico </label>
+            <select name="permisos" id="permisos" >
+                <option value="">Seleccione</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit"> Registrar</button>
+
+
+        </form>
+
+
+
+
+    </section>
+
+
+    
+    <section class="Titulomembresia"><h2 class="h2membresia"> Membresias</h2></section>
+    <section class="seccionnmembresia">
+
+    <article class="Mcobre">
+        <h1>Membresia cobre</h1>
+        <h2>Beneficios</h2>
+        <h3>-Acceso básico, máquinas, cardio</h3>
+        <h3>-Uso de las duchas</h3>
+        <h3>-Asesor general de los ejercicios</h3>
+        <h3>-Eleccion de horarios jornada mañana,tarde o noche</h3>
+        <img src="{{ url_for('static', filename='imagenes/Cobre.png')}}">
+    </article>
+
+    <article class="Moro">
+        <h1>Membresia oro</h1>
+        <h2>Beneficios</h2>
+        <h3>-Acceso básico, máquinas y cardio</h3>
+        <h3>-Uso de las duchas</h3>
+        <h3>-Mas tienmpo con el asesor general de los ejercicios</h3>
+        <h3>-Acceso a el equipo los sabados,domingos y dias festivos</h3>
+        <h3>-Bonos especiales en los productos de la tienda</h3>
+        <img src="{{url_for('static', filename='imagenes/Dorada.png')}}">
+    </article>
+
+    <article class="Macero">
+        <h1>Membresia Acero</h1>
+        <h2>Beneficios</h2>
+        <h3>-Acceso máquinas especializadas</h3>
+        <h3>-Uso de las duchas</h3>
+        <h3>-Acceso a los saunas y zona spa general</h3>
+        <h3>-Asesor especializado ,diseño de rutinas personalizadas</h3>
+        <h3>-Acceso a el equipo los sabados,domingos y dias festivos</h3>
+        <h3>-Descuentos en los productos de la tienda</h3>
+        <img src="{{url_for('static', filename='imagenes/Platino.png')}}">
+    </article>
+
+    <article class="Mtitanio">
+        <h1>Membresia Titanio</h1>
+        <h2>Beneficios</h2>
+        <h3>-Acceso a todas las maquinas</h3>
+        <h3>-Uso de las duchas</h3>
+        <h3>-Acceso a los saunas y zona spa vip</h3>
+        <h3>-Asesor para deportistas de alto redimiento ,diseño de rutinas personalizadas</h3>
+        <h3>-Acceso a el equipo los sabados,domingos y dias festivos</h3>
+        <h3>-Descuentos en los productos de la tienda</h3>
+        <img src="{{url_for('static', filename='imagenes/Azul.png')}}">
+    </article>
+
+    </section>
+
+
+    
+
+
+    <section id=" mensaje_login">
+        <div id="caja3">
+            <h3 class="box">¡Estas a un paso para comenzar esta aventura!! </h3>
+            <p class="box"> Para que puedes acceder a nuestro servicios, ingresa tus datos registrados para que puedas suscribirte </p>
+        </div>
+        
+
+    </section>
+
+    <div id="caja4">
+        <form action="" id="frmLogin">
+            <h2>Iniciar sesión</h2>
+
+            <label for="correoRU">Correo registrado</label>
+            <input type="text" placeholder="Ingrese su correo electronico registrado " id="correoRU">
+
+            <label for="passwordU">Contraseña</label>
+            <input type="password" placeholder="Ingrese su contraseña " id="passwordU">
+
+            <button type="submit" >Click aquí</button>
+
+        </form>
+
+    </div>
+    
+
+<script src="{{ url_for('static', filename='js/registrard.js')}}"></script>
+<script src="{{ url_for('static', filename='js/login.js')}}"></script>
+
+</body>
+
+
+<footer class="footer" id="fo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JDY GYM</h3>
+                <p>Transformando vidas</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Horarios</a></li>
+                    <li><a href="{{url_for('precios')}}" class="footer-link">Precios</a></li>
+                    <li><a href="{{url_for('contacto')}}"  class="footer-link">Desarrolladores</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="contact-info">
+                    <p> +57 123 456 789</p>
+                    <p> info@jdygym.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2023 JDY GYM - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+</html>

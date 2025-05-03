@@ -1,0 +1,70 @@
+body{
+    background-color: white;
+    height:auto;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+
+
+.contenedortablaC{
+    background-color: yellowgreen;
+    height: auto;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+.contenedortabla {
+    background-color: whitesmoke;
+    height: auto;
+    margin: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-size: 12px;
+
+}
+
+
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0f0ff;
+}
+
+#datos_suscripciones{
+    background-color: gray;
+}

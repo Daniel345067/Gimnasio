@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/headerfinal.css')}}">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img">
+                <h1 class="logo-text"> JDY GYM </h1>
+            </div>
+
+            <nav class="navigation">
+                    <a href="" class="nav-link active">Inicio</a>
+                    <a href="{{url_for('registro')}}" class="nav-link ">Registro</a>
+                    <a href="{{url_for('precios')}}" class="nav-link">Planes & precios</a>
+                    <a href="{{url_for('admin')}}" class="nav-link ">Administrador</a>
+            </nav>
+        </div>
+    </header>
+
+
+</body>
+</html>

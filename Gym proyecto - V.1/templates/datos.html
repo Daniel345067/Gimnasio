@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación datos</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylosdatos.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
+    <script src="{{url_for('static', filename='js/imprimirprueba.js')}}" defer></script>
+    
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="{{url_for('static', filename='imagenes/titulo_icono.png')}}" alt="Logo JDY GYM" class="logo-img">
+                <h1 class="logo-text"> JDY GYM </h1>
+            </div>
+
+            <nav class="navigation">
+                    <a href="{{url_for('index')}}" class="nav-link ">Inicio</a>
+                    <a href="{{url_for('registro')}}" class="nav-link ">Registro</a>
+                    <a href="{{url_for('precios')}}" class="nav-link">Planes & precios</a>
+                    <a href="{{url_for('admin')}}" class="nav-link active">Administrador</a>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    <section id="clientes_registrados">
+
+        <h2>Clientes registrados</h2>
+        <div class="contenedorFor">
+            <form action=""  id="frmB">
+                <label for="busqueda">Busca el cliente digitando el documento o nombre</label>
+                <input type="text" placeholder="Documento o nombre" id="busqueda">
+                <button type="submit" >Consultar</button>
+            </form>
+        </div>
+
+        <div class="contenedorFor">
+            <form action="" id="frmE">
+                <label for="input_correo">Elimina el cliente digitando el email registrado</label>
+                <input type="text " placeholder="Documento" id="input_correo">
+                <button type="submit">Eliminar</button>
+    
+            </form>
+        </div>
+
+        <div class="contenedortabla">
+            <table id="usuarios">
+                <thead>
+                    <tr>
+                        <th>Correo</th>
+                        <th>Tipo_documento</th>
+                        <th>Documento</th>                   
+                        <th>Nombre</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Edad</th>
+                        <th>Sexo</th>
+                        <th>Ciudad</th>
+                        <th>Telefono</th>
+                        <th>Permisos</th>
+                    </tr>
+                </thead>
+                <tbody id="usuariosR">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="datos_suscripciones"> 
+        <h2>suscripciones registradas</h2>
+
+        <div class="contenedorFor">
+            <form action=""  id="frmB_sus">
+                <label for="busqueda_sus">Busca el cliente digitando la direccion de correo electronico registrada</label>
+                <input type="text" placeholder="Ingrese correo " id="busqueda_sus">
+                <button type="submit" >Consultar suscripción</button>
+            </form>
+        </div>
+
+        <div class="contenedorFor">
+            <form action="" id="frmE_susc">
+                <label for="input_correosus">Elimina suscripción digitando la dirección de correo electronico registrado</label>
+                <input type="text" placeholder="Ingrese correo" id="input_correosus">
+                <button type="submit">Eliminar suscripción</button>
+    
+            </form>
+        </div>
+
+        <div class="contenedortabla">
+            
+            <table id="suscripciones">
+                <thead>
+                    <tr>
+                        <th>Id suscripción</th>
+                        <th>Correo electrónico</th>
+                        <th>Fecha </th>
+                        <th>Tipo de plan</th>
+                        <th>Tiempo de suscripción</th>
+                        <th>Valor cancelado</th>
+                    </tr>
+                </thead>
+                <tbody id="suscripciones_R">
+    
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section id="final-info"> </section>
+
+<script src="{{url_for('static', filename='js/funciones.js')}}" ></script>
+<script src="{{url_for('static', filename='js/eliminar_suscripcion.js')}}"></script>
+
+</body>
+
+<footer class="footer" id="fo">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JDY GYM</h3>
+                <p>Transformando vidas</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#" class="footer-link">Horarios</a></li>
+                    <li><a href="{{url_for('precios')}}" class="footer-link">Precios</a></li>
+                    <li><a href="{{url_for('contacto')}}"  class="footer-link">Desarrolladores</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <div class="contact-info">
+                    <p> +57 123 456 789</p>
+                    <p> info@jdygym.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2023 JDY GYM - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+</html>

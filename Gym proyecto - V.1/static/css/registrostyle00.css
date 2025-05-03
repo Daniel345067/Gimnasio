@@ -1,0 +1,130 @@
+
+*{
+    color: rgb(7, 7, 7); 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}   
+#registrodatos{
+    background-image:url('../imagenes/imgfondo.jpg'); 
+    margin-top: 93px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: right;
+    
+}
+
+#caja1{
+    background-color: rgba(29, 32, 29, 0.6);
+    height: 50px;
+    width: 35%;
+    margin: 20px;
+    padding: 20px;
+    justify-content: center; 
+
+}
+
+.registrodatos h2{
+    font-size: 20px;
+    color: rgb(188, 199, 206);
+
+}
+.registrodatos h3{
+    color: rgb(188, 199, 206);
+    font-size: 14px;
+    
+}
+
+form{
+    height: auto;
+    width: 50;
+    background-color: rgba(101, 102, 101, 1);
+    border-radius: 3.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+
+
+
+form input,
+form select{
+    height: auto;
+    width: 70%;
+    border-radius: 5px;
+    padding: 11px;
+    margin-bottom: 10px;
+}
+
+form select{
+    color: rgba(7, 7, 7, 0.382);
+}
+
+
+form label{
+    color: rgb(244, 247, 250) important;
+    padding: 3px;
+    width: 60%;
+    text-align: left;
+    font-size: 13px;
+
+}
+
+form button{
+    padding: 12px 24px;
+    border-radius: 999px;
+    margin-top: 35px;
+    height: 40px;
+    width: 45%;
+    background-color: rgba(236, 115, 15, 0.877);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+}
+
+form button:hover{
+    background-color: #b63f22;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+.caja2{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:auto;
+
+}
+.caja2 h3{
+    color: aliceblue;
+}
+
+.caja2 button{
+    padding: 12px 24px;
+    border-bottom: 2px;
+    border-radius: 999px;
+    margin-top: 35px;
+    height: 40px;
+    width: 15%;
+    background-color: rgba(236, 115, 15, 0.877);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.caja2 button:hover{
+    background-color: #b63f22;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
